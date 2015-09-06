@@ -1,24 +1,24 @@
 <div class="container">
   <div class="container-inner inner-default clearfix">
     <% movies.each do |movie| %>
-      <div class="item-box">
-      	<!--
+      <div class="movie-box">
         <div class="image">
           <div class="img-wrap">
+            <!--
             < if movie.image.present? >
               < image_tag(movie.image , alt: movie.title) >
             < else >
-              <= image_tag("no-image.png" , alt: movie.title) >
-            < end >
+            -->
+              <%= image_tag("no-image.png" , alt: movie.title) %>
+            <!--< end >-->
           </div>
         </div>
-        -->
         <div class="detail">
           <p class="title">
             <%= movie.title %>
           </p>
         </div>
-        <!-- <= render 'movies/action' , movie: movie if logged_in? > -->
+        <%= render 'movies/action' , movie: movie if logged_in? %>
       </div>
     <% end %>
   </div>

@@ -1,0 +1,18 @@
+<div class="action">
+  <% if current_user.want? movie %>
+    <%= render 'movies/unwant' , movie: movie %>
+  <% else %>
+    <%= render 'movies/want' , movie: movie %>
+  <% end %> 
+	<!--
+  < if current_user.watched? movie %>
+    <= render 'movies/watched' , movie: movie %>
+  < else %>
+    <= render 'movies/watched' , movie: movie %>
+  < end %>
+
+  < unless current_page?(item) %>
+    <= link_to "詳細" , item , class: "btn btn-info btn-sm" %>
+  < end %>
+  -->
+</div>
