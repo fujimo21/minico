@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :movies , only: [:new , :show]
+  resources :movies , only: [:new , :show, :create, :destroy]
   resources :relationships, only: [:create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
