@@ -3,7 +3,7 @@ class WatchlistsController < ApplicationController
 
   def create
     @movie = Movie.find(params[:movie_id])
-  end
+  
 =begin
   def create
     if params[:asin]
@@ -41,11 +41,12 @@ class WatchlistsController < ApplicationController
     if params[:type] == "Have"
       current_user.have(@item)
     else
-      current_user.want(@item)
+      
     end
-
-  end
 =end
+		current_user.want(@movie)
+  end
+
 	def destroy
 		@movie = current_user.want_movies.find(params[:movie_id])
     current_user.unwant(@movie)

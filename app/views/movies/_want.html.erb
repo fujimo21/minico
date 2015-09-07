@@ -1,4 +1,4 @@
-<%= link_to "" , watchlists_path(movie_id: movie.id , type: "Want") ,
-    :class => "want-#{movie.id} btn-want btn btn-danger btn-sm want",
+<%= link_to "" , watchlists_path(movie_id: movie.id) ,
+    :class => "want-#{movie.id} btn-want btn btn-primary btn-sm want",
     :remote => true,
     :method => :post %>

@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   
   def show
     #if @user.want_movies.present?
-     # @movies = @user.want_movies
+    @movies = @user.want_movies
     #else
       #@movies = @user.watched_movies
     #end

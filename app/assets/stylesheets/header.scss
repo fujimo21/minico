@@ -15,9 +15,10 @@ header {
       max-width: 1200px;
       margin: 0 auto;
       .navbar-header {
-        h1 {
+        h3 {
           margin: 0 !important;
           padding: 10px 0 0 0 !important;
+          /*
           a {
             width: 200px;
             height: 40px !important;
@@ -28,6 +29,7 @@ header {
             white-space: nowrap;
             text-indent: 99999px;
           }
+          */
         }
       }
       .navbar-nav {

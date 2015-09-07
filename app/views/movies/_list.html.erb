@@ -9,7 +9,7 @@
               < image_tag(movie.image , alt: movie.title) >
             < else >
             -->
-              <%= image_tag("no-image.png" , alt: movie.title) %>
+              <%= link_to image_tag("no-image.png" , alt: movie.title), movie %>
             <!--< end >-->
           </div>
         </div>

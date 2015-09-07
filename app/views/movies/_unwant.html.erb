@@ -1,6 +1,6 @@
 <%= link_to "" , 
     watchlist_path(current_user.wants.find_by(:movie_id => movie.id) , 
-      movie_id: movie.id , type: "Want") ,
+      movie_id: movie.id) ,
     :class => "want-#{movie.id} btn-want btn btn-danger btn-sm wanted",
     :remote => true,
     :method => :delete %>

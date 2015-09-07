@@ -1,0 +1,52 @@
+<% content_for(:title) do %>
+  <%= @movie.title %>
+<% end %>
+<% content_for(:description) do %>
+  <%= @movie.title %>に関する情報です。この映画を観たい人を表示しています。
+<% end %>
+<div class="container">
+  <div class="container-inner inner-sm clearfix">
+    <div class="movie-single-main">
+      <div class="image">
+        <div class="img-wrap">
+        	<!--
+          < if @movie.large_image.present? %>
+            <= image_tag(@movie.image, alt: @movie.title) %>
+          < else %>
+          -->
+            <%= image_tag("no-image.png" , alt: @movie.title) %>
+          <!-- < end %> -->
+        </div>
+      </div>
+      <div class="title">
+        <%= @movie.title %>
+      </div>
+      <%= render 'action' , movie: @movie %>
+    </div>
+    <div class="movie-single-side">
+    	<!--
+      <div class="side-box">
+        <h4 class="side-box-title">Wantしたユーザー</h4>
+        <div class="side-box-body">
+          < @movie.watched_users.each do |watched_user| %>
+            <= link_to gravatar_for(watched_user, size: 25), watched_user %>
+          < end %>
+        </div>
+      </div>
+      -->
+      <div class="side-box">
+        <h4 class="side-box-title">Wantしたユーザー</h4>
+        <div class="side-box-body">
+          <% @movie.want_users.each do |want_user| %>
+            <%= link_to gravatar_for(want_user, size: 25), want_user %>
+          <% end %>
+        </div>
+      </div>
+      <!--
+      <div class="text-center">
+        <= link_to(image_tag("amazon-button.png", {alt: "Amazon詳細ページへ"}), @movie.detail_page_url) %>
+      </div>
+      -->
+    </div>
+  </div>
+</div>
