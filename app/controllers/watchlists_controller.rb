@@ -47,7 +47,8 @@ class WatchlistsController < ApplicationController
   end
 =end
 	def destroy
-		
+		@movie = current_user.want_movies.find(params[:movie_id])
+    current_user.unwant(@movie)
 	end
 =begin
   def destroy

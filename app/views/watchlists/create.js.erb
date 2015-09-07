@@ -1,0 +1,6 @@
+$(".want-<%= @movie.id %>").replaceWith("<%= escape_javascript(render('movies/unwant' , movie: @movie)) %>");
+
+$('.btn-want').removeAttr('disabled');
+<!--
+$('.btn-watched,.btn-want').removeAttr('disabled');
+-->
