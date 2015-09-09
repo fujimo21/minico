@@ -29,5 +29,13 @@ module Minico
       g.test_framework false
     end
     config.action_view.embed_authenticity_token_in_remote_forms = true
+    
+    configuration = Tmdb::Configuration.new
+    configuration.base_url
+    configuration.secure_base_url
+    configuration.poster_sizes
+    configuration.backdrop_sizes
+    configuration.profile_sizes
+    configuration.logo_sizes
   end
 end
