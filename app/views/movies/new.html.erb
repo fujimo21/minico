@@ -10,4 +10,10 @@
       <%= f.submit "Register Movie", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
+  
+  <% @movies.each do |movie| %>
+  	<%= image_tag("#{@configuration.base_url}w154#{movie.poster_path}") if movie.poster_path %>
+		<%= movie.title %>
+		
+  <% end %>
 </div>

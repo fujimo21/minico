@@ -4,6 +4,8 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
+    #@movies = Tmdb::Movie.find("Jurassic World").first
+    @movies = Tmdb::Movie.find("バケモノの子")
   end
   
   def show
