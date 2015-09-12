@@ -2,7 +2,23 @@ class WatchlistsController < ApplicationController
 	before_action :logged_in_user
 
   def create
-    @movie = Movie.find(params[:movie_id])
+   
+    if params[:tmdb_id]
+      @movie = Movie.find_or_initialize_by(tmdb_id: params[:tmdb_id])
+    else
+      @movie = Movie.find(params[:movie_id])
+    end
+    
+    if @movie.new_record?
+
+      response = Tmdb::Movie.details(params[:id])
+      
+      #tmdb_movie       = response.movies.first
+      @movie.title        = response.title
+      @movie.poster_path  = response.poster_path
+      @movie.tmdb_id  = response.id
+      @movie.save!
+    end
   
 =begin
   def create
