@@ -3,20 +3,20 @@ class WatchlistsController < ApplicationController
 
   def create
    
-    if params[:tmdb_id]
+    #if params[:tmdb_id]
       @movie = Movie.find_or_initialize_by(tmdb_id: params[:tmdb_id])
-    else
-      @movie = Movie.find(params[:movie_id])
-    end
+    #else
+      #@movie = Movie.find(params[:movie_id])
+    #end
     
     if @movie.new_record?
 
-      response = Tmdb::Movie.details(params[:id])
-      
+      #tmdb_movie = Tmdb::Movie.detail(params[:tmdb_id])
+      @movie = Movie.new(params[:title], title: params[:title], poster_path: params[:poster_path])
       #tmdb_movie       = response.movies.first
-      @movie.title        = response.title
-      @movie.poster_path  = response.poster_path
-      @movie.tmdb_id  = response.id
+      #@movie.title        = tmdb_movie.title
+      #@movie.poster_path  = tmdb_movie.poster_path
+      #@movie.tmdb_id  = tmdb_movie.id
       @movie.save!
     end
   

@@ -1,0 +1,13 @@
+=> [[32m#<Tmdb::Movie:0x00000004bb31f0[0m
+  @adult[32m=[0m[1;36mfalse[0m,
+  @backdrop_path[32m=[0m[31m[1;31m"[0m[31m/67i6n7WVZbB0lQVBoCTr3iJz0Oc.jpg[1;31m"[0m[31m[0m,
+  @id[32m=[0m[1;34m315465[0m,
+  @original_title[32m=[0m[31m[1;31m"[0m[31mバケモノの子[1;31m"[0m[31m[0m,
+  @overview[32m=[0m
+   [31m[1;31m"[0m[31mKyuta, a boy living in Shibuya, and Kumatetsu, a lonesome beast from Jutengai, an imaginary world. One day, Kyuta forays into the imaginary world and, as he's looking for his way back, meets Kumatetsu who becomes his spirit guide. That encounter leads them to many adventures.[1;31m"[0m[31m[0m,
+  @popularity[32m=[0m[1;35m1.22541[0m,
+  @poster_path[32m=[0m[31m[1;31m"[0m[31m/t7QUPFHXIP1OhgGxuxZfS7r3fcM.jpg[1;31m"[0m[31m[0m,
+  @release_date[32m=[0m[31m[1;31m"[0m[31m2015-07-11[1;31m"[0m[31m[0m,
+  @title[32m=[0m[31m[1;31m"[0m[31mThe Boy and the Beast[1;31m"[0m[31m[0m,
+  @vote_average[32m=[0m[1;35m0.0[0m,
+  @vote_count[32m=[0m[1;34m0[0m[32m>[0m]

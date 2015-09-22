@@ -2,18 +2,20 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@movie) do |f| %>
-
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-
-      <%= f.submit "Register Movie", class: "btn btn-large btn-primary" %>
-    <% end %>
+    <!--< form_for(@movie) do |f| %>
+      <= f.label :title %>
+      <= f.text_field :title %>
+      <= f.submit "Register Movie", class: "btn btn-large btn-primary" %>
+    < end %>-->
   </div>
   
-  <% @movies.each do |movie| %>
+  <% @movie.each do |movie| %>
   	<%= image_tag("#{@configuration.base_url}w154#{movie.poster_path}") if movie.poster_path %>
 		<%= movie.title %>
-		
+		<%= link_to "register" , movies_path(movie: {tmdb_id: movie.id, title: movie.title, poster_path: movie.poster_path}),
+    :class => "btn btn-primary btn-lg register",
+    #:remote => true,
+    :method => :post %>
   <% end %>
+  -->
 </div>
